@@ -26,7 +26,11 @@ export const getNotes = async(req, res) => {
 
 export const AddNotes = async(req, res) => {
     const { name, title, content } = req.body;
-    if (!name || !title || !content) return res.status(400).json({msg: "Berikan judul dan konten catatan!"});
+    if (!title || !content) {
+        return res.status(400).json({msg: "Berikan judul dan konten catatan!"});
+    } else if (!name) {
+        return res.status(400).json({msg: "name undefined"});
+    }
         try {
             const user = await Users.findAll({
                 where: {
