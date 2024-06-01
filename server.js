@@ -3,8 +3,8 @@ import dotenv from "dotenv";
 import cookieParser from 'cookie-parser';
 import cors from "cors";
 import db from './config/database.js';
-// import Users from './models/userModel.js';
-// import Notes from './models/notesModel.js';
+import Users from './models/userModel.js';
+import Notes from './models/notesModel.js';
 import router from './routes/index.js';
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -13,8 +13,8 @@ const app = express();
 try {
     await db.authenticate();
     console.log('Database Connected...');
-    // await Users.sync();
-    // await Notes.sync();
+    await Users.sync();
+    await Notes.sync();
 } catch (error) {
     console.error(error);
 }
