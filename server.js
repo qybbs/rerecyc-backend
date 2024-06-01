@@ -7,6 +7,7 @@ import db from './config/database.js';
 // import Notes from './models/notesModel.js';
 import router from './routes/index.js';
 dotenv.config();
+const PORT = 5000 || 3000;
 const app = express();
 
 try {
@@ -23,4 +24,4 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 
-app.listen(5000, ()=> console.log('Server running at port 5000'));
+app.listen(PORT, ()=> console.log(`Server running at port ${PORT}`));
