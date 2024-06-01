@@ -19,7 +19,7 @@ try {
     console.error(error);
 }
 
-app.use(cors({ credentials: true }));
+app.use(cors({ credentials: true, origin: "https://mynotes-frontend-dot-project-180324-b-03.et.r.appspot.com" }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
