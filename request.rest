@@ -1,0 +1,46 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJNIEZpa3JpIiwiZW1haWwiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MTY2MDUxODEsImV4cCI6MTcxNjYwNTE5Nn0.nizfi2tIiVARZmVDzD863OIqNQycJIYBcMefvFzUU1I
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "M Fikri",
+    "email": "email@gmail.com",
+    "password": "123456",
+    "confPassword": "123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "iqbal.gozy@gmail.com",
+    "password": "iqbalgozy123"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJpcWJhbCIsImVtYWlsIjoiaXFiYWwuZ296eUBnbWFpbC5jb20iLCJpYXQiOjE3MTY5NTYwNjMsImV4cCI6MTcxNjk1NjA3OH0.aMLEV3Hct9FwpiwsWyinep_iRpwaZBnru62q6MNtF3M
+
+###
+GET http://localhost:5000/notes/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJpcWJhbCIsImVtYWlsIjoiaXFiYWwuZ296eUBnbWFpbC5jb20iLCJpYXQiOjE3MTcyMDcyOTUsImV4cCI6MTcxNzIwNzMxMH0.Xepp0fhghdFpR0NrHD1QC039ubaxGVeNZbX_zl1I_UM
+
+###
+PUT http://localhost:5000/notes/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJpcWJhbCIsImVtYWlsIjoiaXFiYWwuZ296eUBnbWFpbC5jb20iLCJpYXQiOjE3MTcyMDcyNzksImV4cCI6MTcxNzIwNzI5NH0.2ot4V9DaZ848D4wZjv6uiYCsJLeGvkT7sHysAMQtx2E
+Content-Type: application/json
+
+{
+    "title": "nyoba catatan aja",
+    "content": "awikwok banget bjit"
+}
