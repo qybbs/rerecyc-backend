@@ -64,6 +64,7 @@ export const Login = async(req, res) => {
         });
         res.json({ accessToken });
     } catch (error) {
+        console.log(error);
         res.status(400).json({msg: "Email tidak ditemukan"});
     }
 }
